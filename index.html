@@ -1,0 +1,36 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>CV Generator</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <div class="app">
+    <form class="editor" id="editor" autocomplete="off" onsubmit="return false">
+      <header class="toolbar">
+        <strong>CV Generator</strong>
+        <span class="toolbar-right">
+          <span class="lang-switch" id="lang-switch" role="group" aria-label="CV language"></span>
+          <button type="button" id="btn-pdf" class="primary">Export PDF</button>
+        </span>
+      </header>
+      <p class="hint">Your data is saved only in this browser (localStorage). Nothing is uploaded.</p>
+      <div id="fields"></div>
+      <fieldset>
+        <legend>Data</legend>
+        <div class="row-btns">
+          <button type="button" id="btn-export">Backup JSON</button>
+          <label class="btn">Import JSON<input type="file" id="file-import" accept="application/json" hidden></label>
+          <button type="button" id="btn-reset" class="danger">Reset</button>
+        </div>
+      </fieldset>
+    </form>
+    <div class="preview">
+      <article class="cv" id="cv"></article>
+    </div>
+  </div>
+  <script src="app.js"></script>
+</body>
+</html>
